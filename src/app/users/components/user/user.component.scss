@@ -1,0 +1,116 @@
+@import 'mixins';
+@import 'template';
+@import 'variables';
+
+
+.user {
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__figure {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__body {
+    margin-top: 15px;
+  }
+
+  &__body-title {
+    @include font-primary(24px, $color-title-primary, 400);
+    text-align: center;
+  }
+
+  &__body-list {
+    margin-top: 10px;
+  }
+
+  &__body-item {
+    @include font-primary(16px, $color-text-primary, 400, 24px);
+    text-align: center;
+  }
+
+  &__body-link {
+    @include font-primary(16px, $color-link-secondary, 400, 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    transition: all 0.25s;
+
+    &:hover {
+      @include font-primary(16px, $color-link-hover, 400, 24px);
+    }
+
+    &[data-tooltip] {
+      position: relative;
+
+      &::before {
+        content: attr(data-tooltip);
+        @include font-primary(14px, $color-text-secondary, 400);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 15px;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        background-color: #000000;
+        border-radius: 4px;
+        box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.11);
+        visbility: hidden;
+        opacity: 0;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+          visiblity: visible;
+        }
+      }
+    }
+  }
+
+  &__body-text {
+    @include font-primary(16px, $color-link-secondary, 400, 24px);
+    text-align: center;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all 0.25s;
+
+    &:hover {
+      @include font-primary(16px, $color-link-hover, 400, 24px);
+    }
+  }
+}
+
+
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 200;
+}
+
+

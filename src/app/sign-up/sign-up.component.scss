@@ -1,0 +1,231 @@
+@import 'mixins';
+@import 'template';
+@import 'variables';
+
+
+.sign-up {
+  padding: 160px 0;
+
+  @include for-tablet-landscape-up {
+    padding: 110px 0;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 75px 0;
+  }
+
+  &__header {
+    @extend %base-heading;
+  }
+
+  &__title {
+    @extend %base-title;
+  }
+
+  &__subtitle {
+    @extend %base-subtitle;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 470px;
+
+    &__fieldset {
+
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
+    }
+
+    &__legend {
+      display: flex;
+      @include font-secondary(16px, $color-text-tertiary, 400);
+    }
+
+    &__control {
+    }
+
+    &__control-file {
+      margin-top: 10px;
+    }
+
+    &__control-file-label {
+      position: relative;
+      display: flex;
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid $color-border-input;
+      padding: 10px 15px;
+      background-color: $background-color-primary;
+      transition: all 0.25s;
+      @include font-secondary(16px, $color-input-palceholder, 400);
+
+      &::after {
+        content: 'Browse';
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        @include font-secondary(16px, $color-label, 400);
+        background-color: $background-color-input-file;
+        border-left: 1px solid $color-border-input;
+        border-radius: 0 4px 4px 0;
+      }
+
+      &:active {
+        border: 1px solid $color-border-input-active;
+        box-shadow: 0 0 0 3px $color-shadow-input-active;
+      }
+    }
+
+    &__control-file-input {
+      display: none;
+    }
+
+    &__label {
+      display: inline-flex;
+      @include font-secondary(16px, $color-label, 400);
+    }
+
+    &__input {
+      margin-top: 10px;
+      display: flex;
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid $color-border-input;
+      padding: 10px 15px;
+      background-color: $background-color-primary;
+      transition: all 0.25s;
+      @include font-secondary(16px, $color-input, 400);
+
+      &::placeholder {
+        @include font-secondary(16px, $color-input-palceholder, 400);
+      }
+
+      &:focus {
+        border: 1px solid $color-border-input-active;
+        box-shadow: 0 0 0 3px $color-shadow-input-active;
+      }
+
+      &:disabled {
+        background-color: $background-color-input-diabled;
+      }
+
+      &--error {
+        border: 1px solid $color-border-input-error;
+
+        &:focus {
+          border: 1px solid $color-border-input-error;
+          box-shadow: 0 0 0 3px $color-shadow-input-error;
+        }
+      }
+    }
+
+    &__radio-group {
+      margin-top: 20px;
+    }
+
+    &__radio {
+
+
+      display: flex;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+
+    &__radio-input {
+      display: none;
+
+      &:checked + .form__radio-label {
+
+        &::before {
+          background-color: $background-color-input-checked;
+          border: 1px solid transparent;
+        }
+
+        &::after {
+          background-color: $background-color-primary;
+          transform: translate(0%, -50%) scale(0.4);
+          box-shadow: 1px 1px 1px rgba($color-box-shadow-primary, 0.3);
+          transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+        }
+      }
+    }
+
+    &__radio-label {
+      @include font-secondary(16px, $color-text-tertiary, 400);
+      display: flex;
+      padding-left: 25px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        border-radius: 50%;
+        transform: translate(0%, -50%);
+      }
+
+      &::before {
+        border: 1px solid $color-border-input-radio;
+        transition: all 0.3s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+      }
+
+      &::after {
+        transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+      }
+    }
+
+    &__assistive {
+      margin-top: 5px;
+    }
+
+    &__text {
+      @include font-secondary(12px, $color-text-tertiary, 400);
+
+      &--error {
+        @include font-secondary(12px, $color-text-error, 400);
+      }
+    }
+
+    &__action {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__button {
+
+      &--submit {
+        @extend %base-button;
+      }
+
+      &--upload {
+        @include font-secondary(16px, $color-text-error, 400);
+      }
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

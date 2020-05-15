@@ -1,0 +1,81 @@
+$_white: 	          #ffffff;
+$_spring-wood: 	    #f9f9f3;
+$_tundora: 	        #4c4b4b;
+$_black: 	          #000000;
+$_shark: 	          #212529;
+$_pampas: 	        #f8f7f5;
+$_athens-gray: 	    #eceef1;
+$_gray: 	          #8d8c8c;
+$_hit-gray: 	      #adb5bd;
+$_boulder: 	        #7b7b7b;
+$_bombay: 	        #b2b9c0;
+$_alto: 	          #d7d7d7;
+$_gallery: 	        #ececec;
+$_ghost: 	          #ced4da;
+$_pomegranate:      #f44336;
+$_valencia: 	      #d24335;
+$_burnt-sienna: 	  #ef5b4c;
+$_azalea:           #f8d6da;
+$_clementine: 	    #ef6c00;
+$_chathams-blue:    #1b4a8a;
+$_azure-radiance: 	#007bff;
+$_malibu: 	        #80bdff;
+$_solitude:         #e6f2ff;
+
+//*************************************************************************
+
+$background-color-primary:          $_white;
+$background-color-secondary:        $_spring-wood;
+
+$color-title-primary:               $_shark;
+$color-title-secondary:             $_white;
+
+$color-subtitle-primary:            $_tundora;
+
+$color-text-primary:                $_tundora;
+$color-text-secondary:              $_white;
+$color-text-tertiary:               $_shark;
+$color-text-error:                  $_pomegranate;
+
+$color-link-primary:                $_shark;
+$color-link-secondary:              $_tundora;
+$color-link-active:                 $_chathams-blue;
+$color-link-hover:                  $_burnt-sienna;
+
+$background-color-hamburger:        $_chathams-blue;
+$background-color-hamburger-active: $_burnt-sienna;
+
+
+$color-button:                      $_white;
+$color-button-hover:                $_valencia;
+$color-button-disabled:             $_gray;
+$background-color-button:           $_burnt-sienna;
+$background-color-button-hover:     $_valencia;
+$background-color-button-disabled:  $_alto;
+
+$color-button-flat:                 $_burnt-sienna;
+$color-button-flat-hover:           $_valencia;
+
+$background-color-tooltip:          $_black;
+
+$background-color-overlay:          rgba($_black, 0.5);
+$background-color-close:            $_boulder;
+$color-border-modal:                $_athens-gray;
+
+$color-label:                       $_shark;
+$color-input:                       $_shark;
+$color-input-palceholder:           $_bombay;
+$color-border-input:                $_ghost;
+$color-border-input-active:         $_malibu;
+$color-shadow-input-active:         $_solitude;
+$color-border-input-error:          $_valencia;
+$color-shadow-input-error:          $_azalea;
+$color-border-input-radio:          $_hit-gray;
+$background-color-input-diabled:    $_athens-gray;
+$background-color-input-file:       $_pampas;
+$background-color-input-checked:    $_azure-radiance;
+
+$color-border:                      $_ghost;
+$color-border-light:                $_gallery;
+
+$color-box-shadow-primary:          $_black;

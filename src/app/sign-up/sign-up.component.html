@@ -1,0 +1,89 @@
+<section id="sign-up" class="sign-up">
+  <div class="container sign-up__container">
+    <header class="sign-up__header">
+      <h2 class="sign-up__title">Register to get a work</h2>
+      <h3 class="sign-up__subtitle">
+        Attention! After successful registration and alert,
+        update the list of users in the block from the top
+      </h3>
+    </header>
+
+    <div class="sign-up__content content">
+      <form class="form">
+        <fieldset class="form__fieldset">
+          <div class="form__control">
+            <label class="form__label form__label--error" for="name">Name</label>
+            <input class="form__input form__input--error" id="name" type="text" placeholder="Your name">
+          </div>
+          <div class="form__assistive">
+            <span class="form__text form__text--error">Name is required</span>
+            <span class="form__text form__text--error">Invalid name. Please, provide a valid name</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <div class="form__control">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" id="email" type="email" placeholder="Your email" disabled>
+          </div>
+          <div class="form__assistive hide">
+            <span class="form__text form__text--error">Email is required</span>
+            <span class="form__text form__text--error">Invalid email. Please, provide a valid email</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <div class="form__control">
+            <label class="form__label" for="phone">Phone</label>
+            <input class="form__input" id="phone" type="tel" placeholder="+38 (___)  ___ __ __">
+          </div>
+          <div class="form__assistive">
+            <span class="form__text">Еnter phone number in open format</span>
+            <span class="hide form__text form__text--error">Phone is required</span>
+            <span class="hide form__text form__text--error">Invalid phone. Please, provide a valid phone</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Select your position</legend>
+          <div class="form__radio-group">
+            <div class="form__radio">
+              <input class="form__radio-input" type="radio" name="position" id="frontend" value="frontend" checked>
+              <label class="form__radio-label" for="frontend">Frontend developer</label>
+            </div>
+            <div class="form__radio">
+              <input class="form__radio-input" type="radio" name="position" id="backend" value="backend">
+              <label class="form__radio-label" for="backend">Backend developer</label>
+            </div>
+            <div class="form__radio">
+              <input class="form__radio-input" type="radio" name="position" id="designer" value="designer">
+              <label class="form__radio-label" for="designer">Designer</label>
+            </div>
+            <div class="form__radio">
+              <input class="form__radio-input" type="radio" name="position" id="qa" value="qa">
+              <label class="form__radio-label" for="qa">QA</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <div class="form__control">
+            <label class="form__label" for="photo">Photo</label>
+            <div class="form__control-file">
+              <input class="form__control-file-input" type="file" id="photo">
+              <label class="form__control-file-label" for="photo">Upload your photo</label>
+            </div>
+          </div>
+          <div class="hide form__assistive">
+            <span class="form__text form__text--error">File is required. Please, upload your photo</span>
+          </div>
+        </fieldset>
+
+        <div class="form__action">
+          <button class="form__button form__button--submit" type="submit">Sing up now</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section id="users" class="users">
+  <div class="container users__container">
+    <header class="users__header">
+      <h2 class="users__title">Our cheerful users</h2>
+      <h3 class="users__subtitle">
+        Attention! Sorting users by registration date
+      </h3>
+    </header>
+
+    <div class="users__content content">
+      <div class="cards">
+        <ul class="cards__list">
+          <li class="card__item" *ngFor="let user of users; trackByFn">
+            <app-user [user]="user"></app-user>
+          </li>
+        </ul>
+        <div class="cards__action">
+          <button class="cards__button js-alertShowButton">Show more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

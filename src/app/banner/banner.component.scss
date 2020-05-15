@@ -1,0 +1,76 @@
+@import 'mixins';
+@import 'template';
+@import 'variables';
+
+.banner {
+  padding: 115px 0;
+  background: url('/assets/img/banner/bg_banner.jpg') no-repeat 50% 50% / cover;
+
+  @include for-tablet-landscape-up {
+    padding: 60px 0;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 70px 0;
+  }
+
+  &__header {
+    max-width: 560px;
+
+    @include for-tablet-landscape-up {
+      max-width: 465px;
+    }
+  }
+
+  &__title {
+    @include font-primary(50px, $color-title-secondary, 400, 54px);
+    text-transform: uppercase;
+
+    @include for-tablet-landscape-up {
+      @include font-primary(40px, $color-title-secondary, 400, 44px);
+    }
+
+    @include for-tablet-portrait-up {
+      @include font-primary(30px, $color-title-secondary, 400, 34px);
+      text-align: center;
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+    max-width: 560px;
+
+    @include for-tablet-landscape-up {
+      max-width: 480px;
+    }
+
+    &__text {
+      @include font-primary(16px, $color-text-secondary, 400, 24px);
+
+      @include for-tablet-portrait-up {
+        text-align: center;
+      }
+
+      &--mobile-hidden {
+        @include for-tablet-portrait-up {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 35px;
+
+    @include for-tablet-landscape-up {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    @extend %base-button;
+  }
+}

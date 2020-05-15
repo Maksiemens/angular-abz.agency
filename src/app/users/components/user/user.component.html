@@ -1,0 +1,41 @@
+<div class="user">
+  <header class="user__header">
+    <figure class="user__figure">
+      <picture class="user__picture">
+        <img
+          class="user__img"
+          [alt]="user.name"
+          [src]="user.photo"
+          (error)="checkUserNoImage($event)"
+          loading="lazy"
+        />
+      </picture>
+    </figure>
+  </header>
+  <div class="user__body">
+    <header class="user__body-header">
+      <h5 class="user__body-title">{{ user.name }}</h5>
+    </header>
+    <ul class="user__body-list">
+      <li class="user__body-item">
+        {{ user.position }}
+      </li>
+      <li class="user__body-item">
+        <a
+          class="user__body-link"
+          [href]="'mailto:' + user.email"
+        >
+          {{ user.email }}
+        </a>
+      </li>
+      <li class="user__body-item">
+        <a
+          class="user__body-link js-userPhone"
+          [href]="'tel:' + user.phone"
+        >
+          {{ getMaskedUserPhone(user) }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

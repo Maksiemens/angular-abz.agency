@@ -1,0 +1,98 @@
+@import 'mixins';
+@import 'template';
+@import 'variables';
+
+
+.about-me {
+  padding: 160px 0;
+
+  @include for-tablet-landscape-up {
+    padding: 110px 0;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 75px 0;
+  }
+
+  &__header {
+    @extend %base-heading;
+  }
+
+  &__title {
+    @extend %base-title;
+  }
+
+  .content {
+    margin-top: 70px;
+
+    @include for-tablet-portrait-up {
+      margin-top: 30px;
+    }
+  }
+
+  .article {
+    display: flex;
+    justify-content: space-around;
+
+    @include for-tablet-portrait-up {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &::before {
+      content: '';
+      margin-right: 50px;
+      display: flex;
+      flex-shrink: 0;
+      width: 340px;
+      height: 285px;
+      background: url('/assets/img/about-me/bg_man-laptop.svg') no-repeat center center / cover;
+
+      @include for-tablet-landscape-up {
+        margin-right: 30px;
+        width: 250px;
+        height: 210px;
+      }
+
+      @include for-tablet-portrait-up {
+        margin-right: 0;
+        width: 290px;
+        height: 245px;
+      }
+    }
+
+    &__body {
+      @include for-tablet-portrait-up {
+        margin-top: 35px;
+      }
+    }
+
+    &__title {
+      @include font-primary(24px, $color-title-primary, 400);
+    }
+
+    &__text {
+      @include font-primary(16px, $color-text-primary, 400, 24px);
+      margin-top: 30px;
+
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
+    }
+
+    &__action {
+      margin-top: 35px;
+
+      @include for-tablet-portrait-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__button {
+      @extend %base-flat-button;
+    }
+  }
+}

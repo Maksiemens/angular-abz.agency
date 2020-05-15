@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>TESTTASK</title>
+  <meta name="description" content="Test assignment for Frontend Developer position">
+  <meta name="keywords" content="Test, abz, html, css, angular">
+
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="robots" content="index,follow,noodp">
+  <meta name="googlebot" content="index,follow">
+
+  <meta name="google" content="nositelinkssearchbox">
+  <meta name="google" content="notranslate">
+
+  <meta name="generator" content="Angular 9 SPA">
+  <meta name="subject" content="Test task">
+  <meta content="Test assignment for Frontend Developer position">
+  <meta content="website">
+
+  <link rel="shortcut icon" href="./assets/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="./assets/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="./assets/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="./assets/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="./assets/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="./assets/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="./assets/favicons/apple-touch-icon-1024x1024.png">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> -->
+  <meta name="theme-color" content="#1b4a8a">
+  <meta name="msapplication-navbutton-color" content="#1b4a8a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- <meta name="viewport" content="ya-title=#1b4a8a,ya-dock=fade"> -->
+
+</head>
+<body>
+  <app-root>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      app-root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      body {
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .spinner {
+        position: relative;
+        width: 125px;
+        height: 125px;
+      }
+
+      .spinner::before,
+      .spinner::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+      }
+
+      @keyframes scale {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(0.7);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+
+      .spinner::before {
+        width: 117px;
+        height: 117px;
+        border-color: #1b4a8a;
+        top: 0px;
+        left: 0px;
+        animation: scale 1s linear 0s infinite;
+      }
+
+      .spinner::after {
+        width: 117px;
+        height: 117px;
+        border-color: #1b4a8a;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        animation: scale 1s linear 0.5s infinite;
+      }
+    </style>
+    <div class="spinner"></div>
+  </app-root>
+</body>
+</html>

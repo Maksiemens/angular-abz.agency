@@ -1,0 +1,64 @@
+@import 'mixins';
+@import 'template';
+@import 'variables';
+
+.users {
+  padding: 160px 0;
+  background-color: $background-color-secondary;
+
+  @include for-tablet-landscape-up {
+    padding: 110px 0;
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 75px 0;
+  }
+
+  &__header {
+    @extend %base-heading;
+  }
+
+  &__title {
+    @extend %base-title;
+  }
+
+  &__subtitle {
+    @extend %base-subtitle;
+  }
+
+  .content {
+    margin-top: 75px;
+
+    @include for-tablet-portrait-up {
+      margin-top: 35px;
+    }
+  }
+
+  .cards {
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 60px 135px;
+
+      @include for-tablet-landscape-up {
+        grid-gap: 60px 50px;
+      }
+
+      @include for-tablet-portrait-up {
+        grid-gap: 35px 50px;
+      }
+    }
+
+    &__action {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__button {
+      @extend %base-button;
+    }
+  }
+}

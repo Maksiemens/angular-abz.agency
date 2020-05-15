@@ -1,0 +1,32 @@
+@import 'mixins';
+@import 'template';
+@import 'variables';
+
+.footer {
+  flex: 0 0 auto;
+  border-top: 1px solid $color-border-light;
+  padding: 17px 0;
+
+  @include for-tablet-landscape-up {
+    padding: 21px 0;
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+      @include font-secondary(16px, $color-text-primary, 400);
+    }
+
+    &__link {
+      @include font-secondary(16px, $color-link-secondary, 400);
+      transition: color 0.25s;
+
+      &:hover {
+        @include font-primary(16px, $color-link-hover, 400);
+      }
+    }
+  }
+}
