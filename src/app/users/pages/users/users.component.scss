@@ -56,9 +56,5 @@
       align-items: center;
       justify-content: center;
     }
-
-    &__button {
-      @extend %base-button;
-    }
   }
 }

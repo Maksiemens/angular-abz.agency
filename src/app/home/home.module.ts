@@ -9,7 +9,6 @@ import { SignUpModule } from '@app/sign-up/sign-up.module';
 import { FooterModule } from '@app/core/footer/footer.module';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent

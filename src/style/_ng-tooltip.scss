@@ -1,0 +1,17 @@
+.user-tooltip.tooltip {
+  border-radius: 4px;
+  padding: 6px 10px;
+  background-color: #000000;
+  box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.11);
+
+  &::after {
+    display: none;
+  }
+
+  div {
+    @include font-primary(14px, #ffffff, 400, 18px);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+}

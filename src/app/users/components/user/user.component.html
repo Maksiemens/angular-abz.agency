@@ -14,7 +14,13 @@
   </header>
   <div class="user__body">
     <header class="user__body-header">
-      <h5 class="user__body-title">{{ user.name }}</h5>
+      <h5
+        class="user__body-title user--ellipsis"
+        [tooltip]="user.name"
+        [options]="tooltipOptions"
+      >
+        {{ user.name }}
+      </h5>
     </header>
     <ul class="user__body-list">
       <li class="user__body-item">
@@ -22,15 +28,17 @@
       </li>
       <li class="user__body-item">
         <a
-          class="user__body-link"
+          class="user__body-link user--ellipsis"
           [href]="'mailto:' + user.email"
+          [tooltip]="user.email"
+          [options]="tooltipOptions"
         >
           {{ user.email }}
         </a>
       </li>
       <li class="user__body-item">
         <a
-          class="user__body-link js-userPhone"
+          class="user__body-link"
           [href]="'tel:' + user.phone"
         >
           {{ getMaskedUserPhone(user) }}

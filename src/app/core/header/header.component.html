@@ -2,7 +2,7 @@
   <div class="container header__container">
 
     <div class="logo">
-      <a class="logo__link" href="/">
+      <a class="logo__link" [routerLink]="['/']">
         <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20">
           <path fill="#1b4a8a" d="M7 0L0 10l7 10h16l7-10-7-10z"/>
           <path fill="#fff" d="M20 16h-2V6h-2V4h6v2h-2zm-8 0h-2V6H8V4h6v2h-2z"/>
@@ -13,20 +13,19 @@
 
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link nav__link--active" href="#about-me">About me </a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#relationships">Relationships</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#requirements">Requirements</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#users">Users</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#sign-up">Sign Up</a>
+        <li
+          class="nav__item"
+          *ngFor="let navLink of navLinks; trackByFn"
+        >
+          <a
+            class="nav__link"
+            [routerLink]="[navLink.id]"
+            routerLinkActive="nav__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [ngxScrollTo]="navLink.id"
+          >
+            {{ navLink.text }}
+          </a>
         </li>
       </ul>
     </nav>

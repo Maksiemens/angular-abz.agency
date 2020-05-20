@@ -1,0 +1,13 @@
+<button
+  class="loader-button"
+  [disabled]="options.loading"
+  [class.loader-button--loading]="options.loading"
+  (click)="buttonClick.emit()"
+>
+  <span
+    class="loader-button__text"
+    [class.loader-button__text--loading]="options.loading"
+  >
+    {{ options.text }}
+  </span>
+</button>

@@ -28,59 +28,64 @@
     margin-top: 15px;
   }
 
+  &__body-header {
+    min-width: 0;
+  }
+
   &__body-title {
-    @include font-primary(24px, $color-title-primary, 400);
+    @include font-primary(24px, $color-title-primary, 400, 30px);
     text-align: center;
   }
 
   &__body-list {
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   &__body-item {
     @include font-primary(16px, $color-text-primary, 400, 24px);
     text-align: center;
-  }
-
-  &__body-link {
-    @include font-primary(16px, $color-link-secondary, 400, 24px);
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 0;
+  }
+
+  &__body-link {
+    @include font-primary(16px, $color-link-secondary, 400, 24px);
+    display: block;
     transition: all 0.25s;
 
     &:hover {
       @include font-primary(16px, $color-link-hover, 400, 24px);
     }
 
-    &[data-tooltip] {
-      position: relative;
+    // &[data-tooltip] {
+    //   position: relative;
 
-      &::before {
-        content: attr(data-tooltip);
-        @include font-primary(14px, $color-text-secondary, 400);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px 15px;
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        background-color: #000000;
-        border-radius: 4px;
-        box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.11);
-        visbility: hidden;
-        opacity: 0;
-      }
+    //   &::before {
+    //     content: attr(data-tooltip);
+    //     @include font-primary(14px, $color-text-secondary, 400);
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     padding: 5px 15px;
+    //     position: absolute;
+    //     bottom: -50px;
+    //     left: 50%;
+    //     background-color: #000000;
+    //     border-radius: 4px;
+    //     box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.11);
+    //     visbility: hidden;
+    //     opacity: 0;
+    //   }
 
-      &:hover {
-        &::before {
-          opacity: 1;
-          visiblity: visible;
-        }
-      }
-    }
+    //   &:hover {
+    //     &::before {
+    //       opacity: 1;
+    //       visiblity: visible;
+    //     }
+    //   }
+    // }
   }
 
   &__body-text {
@@ -96,21 +101,30 @@
       @include font-primary(16px, $color-link-hover, 400, 24px);
     }
   }
+
+  &--ellipsis {
+    // -webkit-line-clamp: 1;
+    // -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
+// overflow-wrap: break-word;
+// word-wrap: break-word;
+// hyphens: auto;
 
+// .tooltiptext {
+//   visibility: hidden;
+//   background-color: black;
+//   color: #fff;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 5px 0;
 
-.tooltiptext {
-  visibility: hidden;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 200;
-}
+//   /* Position the tooltip */
+//   position: absolute;
+//   z-index: 200;
+// }
 
 

@@ -10,12 +10,22 @@
     <div class="users__content content">
       <div class="cards">
         <ul class="cards__list">
-          <li class="card__item" *ngFor="let user of users; trackByFn">
+          <li
+            class="card__item"
+            *ngFor="let user of (users$ | async); trackByFn"
+          >
             <app-user [user]="user"></app-user>
           </li>
         </ul>
         <div class="cards__action">
-          <button class="cards__button js-alertShowButton">Show more</button>
+          <app-loader-button
+            *ngIf="!(isAllUsersReceived$ | async)"
+            (buttonClick)="loadMoreUsers()"
+            [options]="{
+              text: 'Show more',
+              loading: (isLoading$ | async)
+            }"
+          ></app-loader-button>
         </div>
       </div>
     </div>

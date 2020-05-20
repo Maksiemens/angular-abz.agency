@@ -12,19 +12,19 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  private getUsersPaginationParams(users): HttpParams {
+  private getUsersPaginationParams(pagination): HttpParams {
     let params = new HttpParams();
-    if (!params.has(users.page)) {
-      params = params.append('page', users.page);
+    if (!params.has(pagination.page)) {
+      params = params.append('page', pagination.page);
     }
-    if (!params.has(users.count)) {
-      params = params.append('count', users.count);
+    if (!params.has(pagination.count)) {
+      params = params.append('count', pagination.count);
     }
     return params;
   }
 
-  loadUsers(): Observable<any> {
-    const params = this.getUsersPaginationParams({});
+  loadUsers(pagination): Observable<any> {
+    const params = this.getUsersPaginationParams(pagination);
     return this.http.get<any>(`${environment.primaryApiUrl}/v1/users`, { params });
   }
 

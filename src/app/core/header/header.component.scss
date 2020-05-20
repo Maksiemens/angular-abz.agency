@@ -2,10 +2,14 @@
 @import 'template';
 @import 'variables';
 
-.header {
+
+:host {
   position: sticky;
   z-index: 200;
   top: 0;
+}
+
+.header {
   padding: 20px 0;
   background-color: $background-color-primary;
 
